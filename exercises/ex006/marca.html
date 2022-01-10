@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: monospace;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Entendendo o DOM</h1>
+    <p>DOM é um acrônimo para <strong>Document Object Model</strong>.</p>
+    <br>
+    
+    <h2>Javascript</h2>
+
+    <script>
+        var p1 = document.getElementsByTagName('p')[0]
+        document.write(`<p>O que significa a sigla DOM? ${p1.innerText}</p><br>`)
+
+        p1.style.color = 'red'
+        
+        document.write(p1.innerHTML)
+        //Diferente do innerText, o innerHTML escreve na página o conteúdo com suas devidas formatações, se estiver em negrito, sublinhado e etc.
+
+        var corpo = document.body
+        corpo.style.background = 'lavender'
+    </script>
+</body>
+</html>
