@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: monospace;
+            font-size: 1.5em;
+        }
+
+        #item {
+            background-color: paleturquoise;
+            width: 200px;
+            height: 200px;
+            cursor: pointer;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Utilizando os eventos onclick e onmouseenter dentro do elemento div: -->
+    <div id="item" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">Hello</div>
+
+    <script>
+        var box = document.querySelector('#item')
+        
+
+        function clicar() {
+            box.innerText = 'World'
+        }
+
+        function entrar() {
+            box.style.background = 'palegoldenrod'
+        }
+
+        function sair(){
+            box.style.background = 'paleturquoise'
+            box.innerText = 'Hello'
+        }
+    </script>
+</body>
+</html>
