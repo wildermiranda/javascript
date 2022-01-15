@@ -16,6 +16,7 @@ body {
 main {
     width: 23rem;
     height: 23rem;
+    padding: 10px;
     border: 1px solid #590FE4;
     border-radius: 1rem;
 
