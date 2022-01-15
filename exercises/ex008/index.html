@@ -5,48 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body {
-            font-family: monospace;
-            font-size: 1.3em;
-        }
-
-        h1 {
-            font-weight: 500;
-        }
-
-        #number1, #number2 {
-            width: 100px;
-            border: none;
-            border-bottom: 1px solid #000;
-        }
-        
-        #button {
-            padding: 5px;
-            border: 1px solid #590FE4;
-            border-radius: 5px;
-            margin-left: 5px;
-            font-family: monospace;
-            font-size: 0.9em;
-            background-color: #FFF;
-            color: #590FE4;
-        }
-
-        div {
-            margin-top: 15px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Somando valores</h1>
-    
-
-    <input type="number" name="number" id="number1"> +
-    <input type="number" name="number" id="number2">
-    
-    <input type="button" value="Somar" id="button" onclick="somar()">
-    
-    <div id="res"></div>
+    <main>
+        <h1>Somando valores</h1>
+        
+        <article>
+            <input type="number" name="number" id="number1"> +
+            <input type="number" name="number" id="number2">
+            
+            <input type="button" value="Somar" id="button" onclick="somar()">
+            
+            <div id="res"></div>
+        </article>
+    </main>
     
 
     <script>
