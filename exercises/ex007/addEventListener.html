@@ -30,17 +30,17 @@
     <script>
         var box = document.querySelector('#item')
         
-        box.addEventListener('click', clicar)
         box.addEventListener('mouseenter', entrar)
+        box.addEventListener('click', clicar)
         box.addEventListener('mouseout', sair)
-        
-        
-        function clicar(){
-            box.innerText = 'World'
-        }
+
 
         function entrar(){
             box.style.background = 'palegoldenrod'
+        }
+
+        function clicar(){
+            box.innerText = 'World'
         }
 
         function sair(){

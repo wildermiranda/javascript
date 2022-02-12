@@ -24,18 +24,18 @@
     </style>
 </head>
 <body>
-    <!-- Utilizando os eventos onclick e onmouseenter dentro do elemento div: -->
+    <!-- Utilizando os eventos onclick, onmouseenter e onmouseout dentro do elemento div: -->
     <div id="item" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">Hello</div>
 
     <script>
         var box = document.querySelector('#item')
         
 
-        function clicar() {
+        function clicar(){
             box.innerText = 'World'
         }
 
-        function entrar() {
+        function entrar(){
             box.style.background = 'palegoldenrod'
         }
 
