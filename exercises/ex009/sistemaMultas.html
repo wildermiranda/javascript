@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: monospace;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    
+    Digite a velocidade: <input type="number" name="txtVelocidade" id="txtVelocidade">
+    <input type="button" value="Verificar" id="button">
+    <div id="result"></div>
+
+    <script>
+        
+        var buttonVerificar = document.querySelector('#button')
+        buttonVerificar.addEventListener('click', calcular)
+
+        
+        function calcular() {
+            var velocidade = Number(document.querySelector('#txtVelocidade').value)
+            var resultado = document.querySelector('#result')
+            
+            resultado.innerHTML = `<p>Dirija sempre com cinto de segurança!</p>`
+
+            if (velocidade > 60) {
+                resultado.innerHTML += `<p>Sua velocidade atual é <strong>${velocidade} Km/h</strong>. Você ultrapassou a velocidade permitida!</p>`
+            } else {
+                resultado.innerHTML += `<p>Sua velocidade atual é <strong>${velocidade} Km/h</strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>
