@@ -12,7 +12,7 @@ function buttonClick() {
     var idade = ano - anoField
 
 
-    if (anoField.length == 0 || anoField > ano || idade > 90) {
+    if (anoField.length == 0 || anoField >= ano || idade > 90) {
 
         alert('Verifique os dados e tente novamente!')
 
