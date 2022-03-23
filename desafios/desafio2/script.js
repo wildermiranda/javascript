@@ -4,7 +4,10 @@ button.addEventListener('click', buttonClick)
 function buttonClick() {
     var resultado = document.querySelector('#resultado')
     var anoField = Number(document.querySelector('#ano').value)
-    var imagem = document.querySelector('#imagem')
+    
+    // Criando elemento img no JavaScript e definindo um id:
+    var imagem = document.createElement('img')
+    imagem.setAttribute('id', 'imagem') 
     
     var data = new Date()
     var ano = data.getFullYear()
@@ -25,22 +28,22 @@ function buttonClick() {
 
             if (idade >= 0 && idade < 8) {
                 // NENEM
-                imagem.src = 'images/nenem-m.png'
+                imagem.setAttribute('src', 'images/nenem-m.png')
             } else if (idade < 15) {
                 // CRIANÇA
-                imagem.src = 'images/menino.png'
+                imagem.setAttribute('src', 'images/menino.png')
             } else if (idade < 21) {
                 // ADOLESCENTE
-                imagem.src = 'images/adolescente-m.png'
+                imagem.setAttribute('src', 'images/adolescente-m.png')
             } else if (idade < 35) {
-                // ADULTO JOVEM 
-                imagem.src = 'images/adulto-jovem-m.png'
+                // ADULTO JOVEM
+                imagem.setAttribute('src', 'images/adulto-jovem-m.png')
             } else if (idade < 50) {
                 // ADULTO
-                imagem.src = 'images/adulto-m.png'
+                imagem.setAttribute('src', 'images/adulto-m.png')
             } else if (idade <= 90) {
                 // IDOSO
-                imagem.src = 'images/idoso-m.png'
+                imagem.setAttribute('src', 'images/idoso-m.png')
             } 
 
         } else {
@@ -48,22 +51,22 @@ function buttonClick() {
 
             if (idade >= 0 && idade < 8) {
                 // NENEM
-                imagem.src = 'images/nenem-f.png'
+                imagem.setAttribute('src', 'images/nenem-f.png')
             } else if (idade < 15){
                 // CRIANÇA
-                imagem.src = 'images/menina.png'
-            }else if (idade < 25) {
-                // ADOLESCENTE
-                imagem.src = 'images/adolescente-f.png'
+                imagem.setAttribute('src', 'images/menina.png')
+            }else if (idade < 21) {
+                // ADOLESCENTE               
+                imagem.setAttribute('src', 'images/adolescente-f.png')
             } else if (idade < 35) {
                 // ADULTO JOVEM
-                imagem.src = 'images/adulto-jovem-f.png'
+                imagem.setAttribute('src', 'images/adulto-jovem-f.png')
             } else if (idade < 50) {
                 // ADULTO
-                imagem.src = 'images/adulto-f.png'
-            } else if (idade < 100) {
+                imagem.setAttribute('src', 'images/adulto-f.png')
+            } else if (idade <= 90) {
                 // IDOSO
-                imagem.src = 'images/idoso-f.png'
+                imagem.setAttribute('src', 'images/idoso-f.png')
             }
         }
 
