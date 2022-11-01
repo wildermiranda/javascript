@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Valor monetário</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
         
         body {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.2em;
+            font-size: 1em;
         }
         span {
-            background-color: cornflowerblue;
+            background-color: #D4DDF4;
             padding: 5px;
         }
     </style>
@@ -23,7 +24,7 @@
        var nome = prompt('Qual é seu nome?')
        var salario = Number(prompt('Qual é seu salário?'))
        
-       document.write(`<span>O salário do ${nome} é ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</span>`)
+       document.write(`<span>Você se chama ${nome} e o seu salário é ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</span>`)
     </script>
 </body>
 </html>
