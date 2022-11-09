@@ -6,24 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
+        * {
             font-family: monospace;
-            font-size: 1.2em;
+            font-size: 1.9rem;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.5rem;
         }
     </style>
 </head>
 <body>
-    <h1>Entendendo o DOM</h1>
-    <div id="paragrafo">Utilizando o método de acesso <strong>querySelector</strong>.</div>
-    <br>
-
-    <div class="test">Fazendo testes com outro paragrafo.</div>
+    <main></main>
 
     <script>
-        document.querySelector('h1').style.color = 'mediumslateblue'
+        //BODY
+        document.querySelector('body').style.background = '#1A1A23'
 
-        document.querySelector('div#paragrafo').style.color = 'red'
-        document.querySelector('div.test').style.color = 'gray'
+        //MAIN CONTENT
+        document.querySelector('main').innerHTML = `
+        <h1>Entendendo o DOM</h1>
+    
+        <button id="dark-button">Active</button>
+
+        <p class="sayCongrats">Congrats! 🎉</p>`
+        
+        
+        // H1
+        document.querySelector('h1').style.color = '#9C9FB7'
+
+        //BUTTON
+        document.querySelector('button#dark-button').style.background = '#2C4335'
+        document.querySelector('#dark-button').style.color = '#6ED5A4'
+        
+        //PARAGRAPH
+        document.querySelector('.sayCongrats').style.color = '#7B7E82'
     </script>
 </body>
 </html>

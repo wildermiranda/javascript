@@ -6,19 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
+        * {
             font-family: monospace;
-            font-size: 1.2em;
+            font-size: 1.9rem;
+            color: #424242;
+        }
+
+        #message {
+            width: fit-content;
+            padding: 0.5rem;
         }
     </style>
 </head>
 <body>
     <h1>Entendendo o DOM</h1>
-    <div id="message">Hello, world!</div>
+    <p id="message">Hello, developer! 🎉</p>
 
     <script>
-        document.getElementById('message').style.background = 'darksalmon'
-        //document.getElementById('message').innerText = 'Mudança de texto utilizando innerText'
+        document.getElementById('message').style.background = '#FEF0CD'
+        // document.getElementById('message').innerText = 'Mudança de texto utilizando innerText 📝'
     </script>
 </body>
 </html>
