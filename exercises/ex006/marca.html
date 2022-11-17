@@ -6,30 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
+        * {
             font-family: monospace;
-            font-size: 1.2em;
+            font-size: 1.3rem;
+        }
+
+        p {
+            width: fit-content;
+            padding: 1rem;
         }
     </style>
 </head>
 <body>
-    <h1>Entendendo o DOM</h1>
-    <p>DOM é um acrônimo para <strong>Document Object Model</strong>.</p>
-    <br>
-    
-    <h2>Javascript</h2>
+    <p>DOM é um acrônimo para <strong>Document Object Model</strong> 🎉</p>
 
     <script>
-        var p1 = document.getElementsByTagName('p')[0]
-        document.write(`<p>O que significa a sigla DOM? ${p1.innerText}</p><br>`)
-
-        p1.style.color = 'red'
+        var paragraph = document.getElementsByTagName('p')[0]
+        paragraph.style.background = '#FCF5DB'
+        paragraph.style.color = '#8F4724'
         
-        document.write(p1.innerHTML)
-        //Diferente do innerText, o innerHTML escreve na página o conteúdo com suas devidas formatações, se estiver em negrito, sublinhado e etc.
-
-        var corpo = document.body
-        corpo.style.background = 'lavender'
+        // paragraph.innerHTML = 'Mudança de texto utilizando innerHTML 📝'
+        // Diferente do innerText, o innerHTML escreve na página o conteúdo com suas devidas formatações, tais como: negrito, sublinhado e etc.
     </script>
 </body>
 </html>
