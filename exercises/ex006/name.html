@@ -6,19 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
+        * {
             font-family: monospace;
-            font-size: 1.2em;
+            font-size: 1.3rem;
+            color: #424242;
+        }
+
+        p {
+            width: fit-content;
         }
     </style>
 </head>
 <body>
-    <h1>Entendendo o DOM</h1>
-    <div name="item">Hello World!</div>
+    <h2>Entendendo o DOM</h2>
+    <p name="item">Hello, World! 🌏</p>
 
     <script>
-        document.getElementsByName('item')[0].innerText = 'Modificando o conteúdo'
-        document.getElementsByName('item')[0].style.background = 'palegreen'
+        document.getElementsByName('item')[0].style.background = '#F8F2F1'
+        // document.getElementsByName('item')[0].innerText = 'Modificando o conteúdo'
     </script>
 </body>
 </html>
