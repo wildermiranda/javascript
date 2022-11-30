@@ -11,8 +11,8 @@
             font-size: 1.5em;
         }
 
-        #item {
-            background-color: paleturquoise;
+        #box {
+            background-color: #DEE8D1;
             width: 200px;
             height: 200px;
             cursor: pointer;
@@ -25,23 +25,25 @@
 </head>
 <body>
     <!-- Utilizando os eventos onclick, onmouseenter e onmouseout dentro do elemento div: -->
-    <div id="item" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">Hello</div>
+    <div id="box" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">Hover me</div>
 
     <script>
-        var box = document.querySelector('#item')
+        var box = document.querySelector('#box')
         
 
-        function clicar(){
-            box.innerText = 'World'
+        function entrar(){
+            box.style.background = '#D4DDF5'
+            box.innerHTML = 'Click me'
         }
 
-        function entrar(){
-            box.style.background = 'palegoldenrod'
+        function clicar(){
+            box.style.background = '#E6D1D9'
+            box.innerText = 'Clicked'
         }
 
         function sair(){
-            box.style.background = 'paleturquoise'
-            box.innerText = 'Hello'
+            box.style.background = '#DEE8D1'
+            box.innerHTML = 'Hover me'
         }
     </script>
 </body>
