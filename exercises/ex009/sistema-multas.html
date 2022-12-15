@@ -4,38 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <title>Document</title>
     <style>
+        * {
+            font-family: 'Space Mono', monospace;
+        }
+
         body {
-            font-family: monospace;
-            font-size: 16px;
+            padding: 1rem;
+        }
+
+        img {
+            width: 6rem;
+        }
+
+        input[type="number"]{
+            width: 10%;
+        }
+        .red {
+            width: fit-content;
+            background-color: #FF8E9E;
+        }
+
+        .green {
+            width: fit-content;
+            background-color: #B6E2A1;
         }
     </style>
 </head>
 <body>
-    <h1>Sistema de Multas</h1>
+    <img src="./velocidade.png" alt="velocidade">
     
-    Digite a velocidade: <input type="number" name="txtVelocidade" id="txtVelocidade">
-    <input type="button" value="Verificar" id="button">
-    <div id="result"></div>
+    <h1>Sistema de Multas</h1>
+
+    <form action="">
+        <label for="velocidade">Digite a velocidade:</label>
+        <input type="number" name="velocidade" id="velocidade" size="5">
+        
+        <input type="button" value="Verificar" id="button">
+        
+        <div id="response"></div>
+    </form>
 
     
     <script>
-        
-        var buttonVerificar = document.querySelector('#button')
-        buttonVerificar.addEventListener('click', calcular)
+        var button = document.querySelector('#button')
+        button.addEventListener('click', radar)
 
         
-        function calcular() {
-            var velocidade = Number(document.querySelector('#txtVelocidade').value)
-            var resultado = document.querySelector('#result')
+        function radar() {
+            var velocidade = Number(document.querySelector('#velocidade').value)
+            var response = document.querySelector('#response')
             
-            resultado.innerHTML = `<p>Dirija sempre com cinto de segurança!</p>`
-
+            response.innerHTML = ''
+    
             if (velocidade > 60) {
-                resultado.innerHTML += `<p>Sua velocidade atual é <strong>${velocidade} Km/h</strong>. Você ultrapassou a velocidade permitida!</p>`
+                response.innerHTML = 
+                `<p>Sua velocidade atual é <strong>${velocidade} Km/h</strong>. Você ultrapassou a velocidade permitida!</p>
+                
+                <p class="red">Multado por excesso de velocidade!</p>`
             } else {
-                resultado.innerHTML += `<p>Sua velocidade atual é <strong>${velocidade} Km/h</strong></p>`
+                response.innerHTML += 
+                `<p>Sua velocidade atual é <strong>${velocidade} Km/h</strong>.</p>
+                
+                <p class="green">Você está dentro do limite!</p>`
             }
         }
     </script>
