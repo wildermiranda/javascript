@@ -4,37 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <title>Document</title>
+    
     <style>
-        body {
-            font-family: monospace;
-            font-size: 16px;
+        * {
+            font-family: 'Space Mono', monospace;
         }
     </style>
 </head>
 <body>
     <h1>Sistema de Nacionalidade</h1>
 
-    Digite o país:
-    <input type="text" name="input-country-name" id="input-country-name">
-    <input type="button" value="Verificar" id="button-response">
-    <div id="result"></div>
+    <form>
+        <label for="countryName">Digite o país:</label>
+        <input type="text" name="countryName" id="countryName" list="countryList">
+
+        <datalist id="countryList">
+            <option>Estados Unidos</option>
+            <option>Inglaterra</option>
+            <option>Marrocos</option>
+            <option>Brasil</option>
+            <option>Argentina</option>
+        </datalist>
+        
+        <input type="button" value="Verificar" id="button">
+        
+        <div id="response"></div>
+    </form>
 
 
     <script>
-        var button = document.querySelector('#button-response')
+        var button = document.querySelector('#button')
         button.addEventListener('click', verify)
 
         function verify() {
-            var countryName = document.querySelector('#input-country-name').value
-            var result = document.querySelector('#result')
+            var countryName = document.querySelector('#countryName').value
+            var response = document.querySelector('#response')
 
-            result.innerHTML = `<p>Vivendo no(a) ${countryName}.</p>`
+            response.innerHTML = `<p>Vivendo no(a) ${countryName}.</p>`
 
             if (countryName == 'Brasil' || countryName == 'brasil') {
-                result.innerHTML += '<p>Você é brasileiro!</p>'
+                response.innerHTML += '<p>Você é brasileiro!</p>'
             } else {
-                result.innerHTML += '<p>Você é estrangeiro!</p>'
+                response.innerHTML += '<p>Você é estrangeiro!</p>'
             }
         }
     </script>
