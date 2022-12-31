@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Space Mono', monospace;
+            color: #4E4E4E;
+        }
+
+        body {
+            padding: 1rem;
+        }
+
+        div {
+            margin: 1rem 0;
+        }
+
+        input[type="number"] {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Voto - obrigatoriedade</h1>
+
+    <form action="" method="post">
+        <label for="age">Digite sua idade:</label>
+        <input type="number" name="age" id="age" min="1" max="100" oninput="votoObrigatoriedade()">
+
+        <div><output></output></div>
+    </form>
+
+    <script>
+        function votoObrigatoriedade() {
+            const message = document.querySelector('output')
+
+            if (age.value == '') {
+                message.innerHTML = ''
+            } else if (age.value < 16) {
+                message.innerHTML = "Voto não permitido!"
+            } else if (age.value < 18 || age.value > 70) {
+                message.innerHTML = "Voto opcional!"
+            } else {
+                message.innerHTML = "Voto obrigatório!"
+            }
+        }
+    </script>
+</body>
+</html>
