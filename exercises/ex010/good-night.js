@@ -1,7 +1,5 @@
 // Horário atual do seu sistema
-const horaAtual = new Date()
-const horas = horaAtual.getHours()
-
+const horas = new Date().getHours()
 const minutos = new Date().getMinutes()
 
 console.log (`Agora são exatamente ${horas}h${minutos}.`)
