@@ -1,9 +1,8 @@
-var diaAtual = new Date()
-var diaSemana = diaAtual.getDay()
+const diaSemana = new Date().getDay()
 
 // Domingo = 0  Segunda = 1  Terça = 2  Quarta = 3  Quinta = 4  Sexta = 5  Sábado = 6 
 
-// diaSemana = 2
+console.log(diaSemana) 
 
 switch (diaSemana) {
     case 0:

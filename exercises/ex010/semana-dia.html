@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+        * {
+            font-family: 'Space Mono', monospace;
+            color: #4E4E4E;
+        }
+
+        body {
+            height: 90vh;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 5rem;
+        }
+
+        .error {
+            color: salmon;
+        }
+    </style>
+</head>
+<body>
+    <h1>Today is <output></output></h1>
+
+    <script>
+        const output = document.querySelector('output')
+
+        const day = new Date().getDay()
+
+        switch(day) {
+            case 0:
+                output.innerHTML = 'Sunday'
+                break
+            case 1:
+                output.innerHTML = 'Monday'
+                break
+            case 2:
+                output.innerHTML = 'Tuesday'
+                break 
+            case 3:
+                output.innerHTML = 'Wednesday'
+                break
+            case 4:
+                output.innerHTML = 'Thursday'
+                break
+            case 5:
+                output.innerHTML = 'Friday'
+                break
+            case 6:
+                output.innerHTML = 'Saturday'
+                break
+            default:
+                output.innerHTML = 'ERROR'
+                output.classList = 'error'
+                break
+        }
+    </script>
+</body>
+</html>
