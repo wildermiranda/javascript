@@ -1,32 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
-
-body {
-    font-family: 'Open Sans', sans-serif;
-    color: #1B1A17;
-
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    font-family: 'Courier Prime', monospace;
+    color: #4E4E4E;
 }
 
-main {
-    max-width: 80%;
-    width: 400px;
-    padding: 20px;
-    background-color: #FFF;
-    border-radius: 3px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.200);
+body {
+    height: 100vh;
 
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
 }
 
-img {
-    padding-top: 15px;
+
+
+
+.wrapper {
+    text-align: center;
 }
 
-footer p {
-    font-size: 15px;
+
+.message {
+    width: fit-content;
+    padding: .3rem;
+    margin: 2rem auto;
+    border-radius: .3rem;
 }
+
+.morning {
+    background-color: #F7EBD4;
+    color: #866A2C;
+}
+
+.afternoon {
+    background-color: #D4F7E6;
+    color: #32755D;
+}
+
+.night {
+    background-color: #2C4335;
+    color: #64C094;
+}
+
+
+output {
+    display: inline-block;
+    font-size: 6rem; 
+    color: #9A9DB4;
+    font-weight: 900;
+}
+
+
+
+

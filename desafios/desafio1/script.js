@@ -1,28 +1,33 @@
-var body = document.querySelector('body')
-body.addEventListener('onload', carregar())
+const body = document.querySelector('body')
+const icon = document.querySelector('.icon')
+const message = document.querySelector('.message')
+const output = document.querySelector('output')
 
-function carregar(){
-    var mensagem = document.querySelector('#mensagem')
-    var imagem = document.querySelector('#imagem')
 
-    var data = new Date()
-    var hora = data.getHours()
-    mensagem.innerHTML = `Agora são ${hora} horas.`
+const setHour = 19
+const setMinute = new Date().getMinutes()
 
-    if (hora >= 0 && hora < 12) {
-        // BOM DIA
+if (setMinute < 10) {
+    output.innerHTML = setHour + 'h0' + setMinute
+} else {
+    output.innerHTML = setHour + 'h' + setMinute
+} 
 
-        imagem.src = 'images/morning.png'
-        document.querySelector('body').style.background = '#F2CA99'
-    } else if (hora >= 12 && hora <= 18){
-        // BOA TARDE
+if (setHour < 12) {
+    body.style.background = '#F7F5EB'
+    icon.innerHTML = '☀️'
+    message.innerHTML = 'Good morning'
+    message.classList = 'message morning'
 
-        imagem.src = 'images/afternoon.png'
-        document.querySelector('body').style.background = '#D9C6BA'
-    } else {
-        // BOA NOITE
+} else if (setHour > 11 && setHour < 19) {
+    body.style.background = '#EAFDFC'
+    icon.innerHTML = '☁️'
+    message.innerHTML = 'Good afternoon'
+    message.classList = 'message afternoon'
 
-        imagem.src = 'images/night.png'
-        document.querySelector('body').style.background = '#A9C6D9'
-    }
+} else {
+    body.style.background = '#1A1A23'
+    icon.innerHTML = '🌙'
+    message.innerHTML = 'Good night'
+    message.classList = 'message night'
 }
