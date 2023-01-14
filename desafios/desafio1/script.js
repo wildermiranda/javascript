@@ -4,7 +4,7 @@ const message = document.querySelector('.message')
 const output = document.querySelector('output')
 
 
-const setHour = 19
+const setHour = new Date().getHours()
 const setMinute = new Date().getMinutes()
 
 if (setMinute < 10) {
